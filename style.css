@@ -1,0 +1,251 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  background-image: url("./basic-cover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome-container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(36, 36, 36, 0.5);
+  padding: 5rem;
+  border-radius: 2rem;
+  width: max-content;
+  box-shadow: 0px 4px 6px black;
+  border: none;
+  margin-top: 2rem;
+}
+
+.message-welcome {
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 2px 6px 4px black;
+  line-height: 4rem;
+  margin-bottom: 1.5rem;
+  font-family: "Roboto Slab", serif;
+}
+
+.input-user {
+  position: relative;
+  margin-top: 2rem;
+}
+
+#label-input {
+  position: absolute;
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 2px 6px 6px black;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+}
+
+#input-name {
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  background-color: transparent;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 2px 4px black;
+  padding: 1.3rem;
+  font-family: "Roboto Slab", serif;
+  width: 15rem;
+}
+
+.alert-name {
+  font-size: 15px;
+  color: rgba(255, 213, 213, 0.712);
+  text-shadow: 2px 6px 6px black;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 1.5rem;
+}
+
+#go-button {
+  cursor: pointer;
+  height: 45px;
+  width: 90px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  background-color: transparent;
+  box-shadow: 0px 2px 4px black;
+  font-size: 18px;
+  font-family: "Roboto Slab", serif;
+  text-decoration: wavy;
+}
+
+#go-button:hover {
+  letter-spacing: 1px;
+  background-color: rgb(241, 241, 241);
+  color: rgb(36, 36, 36);
+  box-shadow: 0px 6px 8px black;
+}
+
+.welcome-container:hover {
+  box-shadow: 0px 4px 6px rgb(224, 224, 224);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.ring {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: load 3s linear 1.5;
+  animation-play-state: paused;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #fff;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #fff;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #fff;
+  }
+}
+
+.ring::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: white;
+}
+
+.loading {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 3px;
+  font-family: "Roboto";
+  animation: inOut 2s linear 2.5s;
+  animation-play-state: paused;
+}
+
+@keyframes inOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.section-clock {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(36, 36, 36, 0.5);
+  color: #fff;
+  text-shadow: 0px 4px 6px black;
+  box-shadow: 0px 4px 6px black;
+  border-radius: 10px;
+  height: max-content;
+  width: max-content;
+  padding: 60px;
+}
+
+.clock {
+  font-size: 100px;
+}
+
+.message {
+  font-size: 1.8rem;
+}
+
+.goorezy {
+  padding-top: 2rem;
+  text-align: center;
+  align-items: center;
+}
+
+.spam {
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  text-shadow: 0px 4px 6px black;
+}
+
+.spam:hover {
+  cursor: none;
+  transform: scale(1.1);
+}
+
+.section-clock:hover {
+  box-shadow: 0px 4px 6px #fff;
+}
+
+@media (max-width: 600px) {
+  .body {
+    height: 100vh;
+  }
+
+  .welcome-container {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .message-welcome {
+    font-size: 24px;
+    line-height: 3rem;
+  }
+
+  .section-clock {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .clock {
+    font-size: 3rem;
+  }
+
+  .message {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  #label-input {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-left: 1.2rem;
+  }
+}

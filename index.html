@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Edu+TAS+Beginner:wght@500&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Reloj Digital</title>
+  </head>
+  <body>
+    <section class="section-welcome">
+      <div class="welcome-container">
+        <div class="message-welcome">
+          <h1>Reloj Digital</h1>
+          <p>¡Bienvenido humano!</p>
+        </div>
+        <div class="input-user">
+          <label class="label" for="input-name" id="label-input"
+            >Ingrese su nombre aqui</label
+          >
+          <input
+            type="text"
+            id="input-name"
+            class="user-name"
+            autocomplete="off"
+            required
+          />
+          <p class="alert-name hide">Debes escribir tu nombre!</p>
+        </div>
+        <div class="div-button">
+          <button class="go-button" id="go-button">Vamos!</button>
+        </div>
+        <div class="goorezy">
+          <p class="spam">Desarrollado por Goorezy</p>
+        </div>
+      </div>
+    </section>
+    <section class="section-loading hide">
+      <div class="center">
+        <div class="ring"></div>
+        <span class="loading">CARGANDO</span>
+      </div>
+    </section>
+    <section class="section-clock hide">
+      <div class="clock">Reloj</div>
+      <div class="message">Mensaje</div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
